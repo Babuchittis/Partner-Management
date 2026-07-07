@@ -5,12 +5,28 @@ POST {{server}}/partner-services/Partner
 Content-Type: application/json
 
 {
-    "partner_ID": "P1001",
-    "name_org": "New Partner",
+    "partner_ID": "P1002",
+    "name_org": "Deloitte",
     "country": "USA",
     "partner_status": "Active",
     "partner_level": "Silver"
 }
 
-#### Get all partners
+### Get all partners
 GET {{server}}/partner-services/Partner
+
+### Get partner by ID
+GET {{server}}/partner-services/Partner('8e133414-b30f-478c-9511-3967db153b62')
+
+### Update partner by ID
+PATCH {{server}}/partner-services/Partner('8e133414-b30f-478c-9511-3967db153b62')
+Content-Type: application/json  
+
+{
+    "name_org": "Deloitte Consulting",
+    "partner_status": "Active",
+    "partner_level": "Gold"
+}
+
+### Delete partner by ID
+DELETE {{server}}/partner-services/Partner('8e133414-b30f-478c-9511-3967db153b62')

@@ -1,0 +1,16 @@
+@server=http://localhost:4004/odata/v4
+
+### Post create new partner
+POST {{server}}/partner-services/Partner
+Content-Type: application/json
+
+{
+    "partner_ID": "P1001",
+    "name_org": "New Partner",
+    "country": "USA",
+    "partner_status": "Active",
+    "partner_level": "Silver"
+}
+
+#### Get all partners
+GET {{server}}/partner-services/Partner
